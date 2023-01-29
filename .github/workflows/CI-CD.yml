@@ -22,7 +22,7 @@ jobs:
       - name: Install and Test
         run: |
           npm install
-          npm run-script dev-build
+          npm run-script build
           npm run-script test
       - name: Upload Artifacts
         uses: actions/upload-artifact@master
