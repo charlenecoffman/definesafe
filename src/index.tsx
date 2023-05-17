@@ -3,13 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Auth0Provider
+      domain="definesafe.us.auth0.com"
+      clientId="1Nv6m7ff4JNcmlE1uEYh4VSr2dPOOGnF"
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+        audience: "https://api.definesafe.com",
+        scope: "read:current_user update:current_user_metadata write:admin"
+      }}
+    >
+      <App />
+    </Auth0Provider>
   </React.StrictMode>
 );
 

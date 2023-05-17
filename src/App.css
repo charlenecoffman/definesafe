@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.token-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.token-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.token-exit {
+  opacity: 1;
+}
+.token-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+input {
+  color:black;
+}
