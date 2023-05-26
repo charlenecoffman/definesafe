@@ -13,6 +13,7 @@ root.render(
     <Auth0Provider
       domain="definesafe.us.auth0.com"
       clientId="1Nv6m7ff4JNcmlE1uEYh4VSr2dPOOGnF"
+      cacheLocation='localstorage'
       authorizationParams={{
         redirect_uri: window.location.origin,
         audience: "https://api.definesafe.com",

@@ -55,7 +55,7 @@ export const addMedicationForUser = async (newMed: Medication, token: string): P
 export const removeMedication = async (medicationId: string, token: string): Promise<void> => {    
     if(token !== ""){
         await axios.delete(
-            'https://umygo8d8f0.execute-api.us-east-1.amazonaws.com/v1/medication/' + medicationId,
+            'https://umygo8d8f0.execute-api.us-east-1.amazonaws.com/v1/medication?medication_id=' + medicationId,
             {               
                 headers: {
                     Accept: 'application/json',

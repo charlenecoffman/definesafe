@@ -1,18 +1,19 @@
-import AllRoutes from './AllRoutes';
+import AllRoutes from './components/AllRoutes';
 import { TopMenu } from './components/TopMenu';
 import './App.css';
 import { Authentication } from './components/Authentication';
+import { Layout } from './components/Layout';
 
-function App() {  
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
         <Authentication>
           <TopMenu />
-          <AllRoutes />
+          <Layout>
+            <AllRoutes />
+          </Layout>
         </Authentication>
-      </header>
-    </div>
+    </>
   );
 }
 
